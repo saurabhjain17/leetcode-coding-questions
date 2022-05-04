@@ -7,8 +7,8 @@ class Solution:
                 counti+=1
                 seti[k-i]-=1
             else:
-                if i not in seti:
-                    seti[i]=1
-                else:
+                try:
                     seti[i]+=1
+                except:
+                    seti[i]=1
         return counti        
