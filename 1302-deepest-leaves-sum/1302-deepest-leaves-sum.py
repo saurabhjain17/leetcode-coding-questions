@@ -12,14 +12,20 @@ class Solution:
         q= queue.Queue()
         q.put(root)
         sumi=0
+        n=1
+        
         while q.empty() == False:
-            n=q.qsize()
+            
             sumi=0
+            t=0
             for i in range (n):
                 nod=q.get()
                 sumi+=nod.val
                 if nod.left:
                     q.put(nod.left)
+                    t+=1
                 if nod.right:
                     q.put(nod.right)
+                    t+=1
+            n=t       
         return sumi            
