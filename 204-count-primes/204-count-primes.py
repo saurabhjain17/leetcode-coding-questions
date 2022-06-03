@@ -9,7 +9,7 @@ class Solution:
         for i in range(2,n):
             if dp[i]==False:
                 counti+=1
-                j=i+i
+                j=i*i
                 while j<n:
                     dp[j]=True
                     j+=i
