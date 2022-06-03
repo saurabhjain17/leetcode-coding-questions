@@ -1,5 +1,7 @@
 class Solution:
+    
     def countPrimes(self, n: int) -> int:
+      
         dp=[False]*(n)
         if n<2:
             return 0
