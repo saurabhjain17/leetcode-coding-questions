@@ -11,7 +11,7 @@ class Solution:
         for tem in [[1,0],[0,1],[-1,0],[0,-1]]:
             left=r+tem[0]
             right=c+tem[1]
-            if left>-1 and left<ro and right>-1 and right<co and (left,right) not in vis and board[left][right]==word[ind+1]:
+            if left>-1 and left<ro and right>-1 and right<co and board[left][right]==word[ind+1] and (left,right) not in vis :
                 vis.add((left,right))
                 if  self.dfs(board,word,ro,co,ind+1,vis,n,left,right)==True:
                     return True
