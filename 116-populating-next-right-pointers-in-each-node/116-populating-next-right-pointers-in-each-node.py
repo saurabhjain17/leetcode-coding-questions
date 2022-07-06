@@ -14,7 +14,7 @@ class Solution:
             return root
         q=deque([root])
         length=1
-        while q:
+        while length>0:
             n=length
             for _ in range(n):
                 nod=q.popleft()
