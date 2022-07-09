@@ -14,12 +14,9 @@ class Solution:
     #     return counti+1        
     def partitionArray(self, A, k):
         A.sort()
-        res = 1
-        mn = mx = A[0]
-        for a in A:
-            mn = min(mn, a)
-            mx = max(mx, a)
-            if mx - mn > k:
+        res, j = 1, 0
+        for i in range(len(A)):
+             if A[i] - A[j] > k:
                 res += 1
-                mn = mx = a
+                j = i
         return res
