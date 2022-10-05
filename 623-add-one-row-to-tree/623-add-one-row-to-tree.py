@@ -23,7 +23,7 @@ class Solution:
                 if nod.right:
                     q.append(nod.right)
             dph+=1
-        print(q)    
+        # print(q)    
         for nod in q:
            
                 new_node=TreeNode(val)
