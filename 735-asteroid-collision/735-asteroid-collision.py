@@ -12,7 +12,7 @@ class Solution:
                     st.pop(-1)
                     
                     
-                print(st)    
+                # print(st)    
             else:
                 st.append(a[i])
         return st        
