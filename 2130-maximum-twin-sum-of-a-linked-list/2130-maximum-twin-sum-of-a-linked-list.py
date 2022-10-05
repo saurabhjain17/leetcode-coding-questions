@@ -10,13 +10,16 @@ class Solution:
         while nod:
             length+=1
             nod=nod.next
-        ans=[0]*(length//2) 
+        p=length//2    
+        ans=[0]*p 
         nod=head
         
-        for i in range(length//2):
+        
+        for i in range(p):
             ans[i]+=nod.val
             nod=nod.next
-        for i in range(length//2-1,-1,-1):
+        p=p-1    
+        for i in range(p,-1,-1):
             ans[i]+=nod.val
             nod=nod.next
         return max(ans)    
