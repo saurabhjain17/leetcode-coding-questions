@@ -28,5 +28,6 @@ class Solution:
                 lefti=prefix[left[i]]
             righti=prefix[right[i]-1]
             maxi=max(maxi,nums[i]*(righti-lefti))
-        return maxi%modu   
+            # maxi%=modu
+        return maxi %modu
         
