@@ -1,10 +1,12 @@
 class Solution:
     def maxSumMinProduct(self, nums: List[int]) -> int:
-        prefix=nums.copy()
-        modu=10**9+7
         n=len(nums)
+        prefix=[0]*n
+        prefix[0]=nums[0]
+        modu=10**9+7
+        # n=len(nums)
         for i in range(1,n):
-            prefix[i]+=prefix[i-1]
+            prefix[i]=prefix[i-1]+nums[i]
         left=[-1]*n
         right=[n]*n
         st=[0]
