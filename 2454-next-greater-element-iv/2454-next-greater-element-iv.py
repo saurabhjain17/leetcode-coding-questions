@@ -1,5 +1,6 @@
 class Solution:
     def secondGreaterElement(self, nums: List[int]) -> List[int]:
+#         find 1st greater
         n=len(nums)
         fir_greater=[n]*n
         s=[n-1]
@@ -9,7 +10,9 @@ class Solution:
             if s:
                 fir_greater[i]=s[-1]
             s.append(i)
+#        find second greater using first greater     
         ans=[-1]*n    
+        
         for i in range(n):
             l=fir_greater[i]+1
             while l<n and nums[i]>=nums[l]:
